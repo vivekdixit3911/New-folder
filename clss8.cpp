@@ -29,12 +29,11 @@ class rectangle{
     int getbredth(){
         return bredth;
     }
-    int peri(){
+    int peri(){ //this is inline function
         return length*bredth;
     }
-    int area(){
-        return 2*(length+bredth);
-    }
+    int area();
+    
     rectangle(){
         length=1;
         bredth=1;
@@ -49,6 +48,9 @@ rectangle(rectangle &r){
     bredth=r.bredth;
 }
 };
+int rectangle:: area(){
+        return 2*(length+bredth);
+    }
 
 int main(){
 // rectangle one;
@@ -57,7 +59,7 @@ int main(){
 // rectangle *wo=new rectangle;
 // wo->setBre(50);
 // wo->setLen(5);
-rectangle one(5,6);
+rectangle one(10,15);
 
 cout <<one.peri()<<endl;
 return 0;
