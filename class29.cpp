@@ -23,7 +23,7 @@ void append(struct array *arr,int last){
         arr->A[i]=arr->A[i-1];
     }
     arr->A[place]=number; 
-    arr->len++;
+    
  }
  }
 int main(){
@@ -32,7 +32,7 @@ struct array arr ={{2,3,4,6,4},10,5};
 cout<<"Enter the value u want to enter at last"<<endl;
 cin>>n;
 append(&arr,n);
-add(&arr,0,99);
+add(&arr,5,99);
 display(arr);
 return 0;
 }
